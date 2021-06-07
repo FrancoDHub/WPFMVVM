@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPFMVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFMVVM"
+        mc:Ignorable="d"
+        Title="{Binding TitleOfMainwindows}" Height="450" Width="800">
+    <Grid Margin="0,0,-8,1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="54"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="BtnGestionsEtudiant" Content="Gestion Etudiant" Margin="28,21,615,5" VerticalAlignment="Top"  Width="113" Height="28" HorizontalAlignment="Left" Click="btnAjouter_Click"/>
+        <Button x:Name="BtnAbsence" Content="Absence"  Margin="350,21,0,0" VerticalAlignment="Top" Width="113" Height="28" HorizontalAlignment="Left" Click="BtnAbsence_Click"/>
+        <Button x:Name="BtnLogin" Content="Login" Margin="624,21,62,0" VerticalAlignment="Top" Height="28" Width="113" RenderTransformOrigin="0.503,-0.624"/>
+        <Grid x:Name="grcontent" Grid.Row="1" Background="#FFD4F30C"/>
+
+
+    </Grid>
+</Window>

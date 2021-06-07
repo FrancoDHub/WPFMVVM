@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="WPFMVVM.ViewInterfaces.MyUserControls.UCetudiant"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFMVVM.ViewInterfaces.MyUserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="0,28,0,-28">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="77*"/>
+            <ColumnDefinition Width="323*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="{Binding businesslabel}" Grid.Column="1" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top" Width="320" FontSize="16"/>
+        <StackPanel Margin="10,23,20,0" Orientation="Vertical" Grid.Row="1" Height="175" VerticalAlignment="Top">
+            <Button x:Name="BtnAjouter" Content="{Binding Addbutton}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="33" FontSize="10" Click="BtnAjouter_Click"  />
+            <Button x:Name="BtnEditer" Content="{Binding Editbutton}" HorizontalAlignment="Left" Margin="3,20,0,0" VerticalAlignment="Top" Width="111" Height="33" FontSize="10" Click="BtnEditer_Click"/>
+            <Button x:Name="BtnSupprimer" Content="{Binding Deletebutton}" HorizontalAlignment="Left" Margin="3,20,0,0" VerticalAlignment="Top" Width="111" Height="33" FontSize="10" Click="BtnSupprimer_Click"/>
+
+        </StackPanel>
+        <DataGrid Grid.Column="1" Grid.Row="1"
+                  SelectedItem="{Binding SelectedStudent}"
+                  ItemsSource="{Binding LstofObject}"
+                  />
+
+    </Grid>
+</UserControl>
